@@ -14,6 +14,8 @@ package com.ohdoking.tddjava.ch03tictactoe;
  */
 public class TicTacToe {
 
+    private static final int SIZE = 3;
+
     private Character[][] board = {
             {'\0', '\0', '\0'},
             {'\0', '\0', '\0'},
@@ -26,12 +28,8 @@ public class TicTacToe {
         checkAxis(y);
         lastPlayer = nextPlayer();
         setBox(x, y, lastPlayer);
-        for (int index = 0; index < 3; index++) {
-            if (board[0][index] == lastPlayer &&
-                    board[1][index] == lastPlayer &&
-                    board[2][index] == lastPlayer) {
-                return lastPlayer + " is the winner";
-            }
+        if (isWin()) {
+            return lastPlayer + " is the winner";
         }
         return "No winner";
     }
@@ -55,6 +53,15 @@ public class TicTacToe {
         if (lastPlayer == 'X') {
             return 'O'; }
         return 'X';
+    }
+
+    private boolean isWin() {
+        for (int i = 0; i < SIZE; i++) {
+            if (board[0][i] + board[1][i] + board[2][i] == (lastPlayer * SIZE)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
