@@ -53,7 +53,12 @@ public class TicTacToeSpec {
     /**
      * When a piece is placed on an occupied space, then RuntimeException is thrown.
      */
-   
+    @Test
+    public void whenOccupiedThenRuntimeException() {
+        ticTacToe.play(2, 1);
+        exception.expect(RuntimeException.class);
+        ticTacToe.play(2, 1);
+    }
 
 
 }
