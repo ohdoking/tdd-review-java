@@ -34,6 +34,11 @@ import static org.junit.Assert.*;
  * Requirement 3
  *
  * A player wins by being the first to connect a line of friendly pieces from one side or corner of the board to the other.
+ *
+ * Requirement 4
+ *
+ * The result is a draw when all the boxes are filled.
+ *
  */
 public class TicTacToeSpec {
 
@@ -153,6 +158,23 @@ public class TicTacToeSpec {
         ticTacToe.play(1, 2); // O
         String actual = ticTacToe.play(3, 1); // O
         assertEquals("X is the winner", actual);
+    }
+
+    /**
+     * The result is a draw when all the boxes are filled.
+     */
+    @Test
+    public void whenAllBoxesAreFilledThenDraw() {
+        ticTacToe.play(1, 1);
+        ticTacToe.play(1, 2);
+        ticTacToe.play(1, 3);
+        ticTacToe.play(2, 1);
+        ticTacToe.play(2, 3);
+        ticTacToe.play(2, 2);
+        ticTacToe.play(3, 1);
+        ticTacToe.play(3, 3);
+        String actual = ticTacToe.play(3, 2);
+        assertEquals("The result is draw", actual);
     }
 
 }
