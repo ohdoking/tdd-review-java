@@ -43,10 +43,17 @@ public class TicTacToeSpec {
     /**
      * When a piece is placed anywhere outside the Y axis, then RuntimeException is thrown.
      */
+    @Test
+    public void whenYOutsideBoardThenRuntimeException() {
+        exception.expect(RuntimeException.class);
+        ticTacToe.play(2, 5);
+    }
+
 
     /**
      * When a piece is placed on an occupied space, then RuntimeException is thrown.
      */
+   
 
 
 }
