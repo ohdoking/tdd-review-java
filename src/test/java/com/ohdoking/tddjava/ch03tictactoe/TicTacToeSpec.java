@@ -93,6 +93,11 @@ public class TicTacToeSpec {
     /**
      * If the last turn was played by O, then the next turn should be played by X
      */
-
+    @Test
+    public void givenLastTurnWasOWhenNextPlayerThenX(){
+        ticTacToe.play(1, 1);
+        ticTacToe.play(1, 2);
+        assertEquals('X', ticTacToe.nextPlayer());
+    }
 
 }
