@@ -5,10 +5,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import static org.junit.Assert.*;
+
+
 /**
  * TicTacToeSpec
  *
  * @author ohdoking
+ *
+ * Requirement 1
  *
  * A piece can be placed on any empty space of a 3×3 board.
  *
@@ -16,6 +21,15 @@ import org.junit.rules.ExpectedException;
  * • When a piece is placed anywhere outside the X axis, then RuntimeException is thrown.
  * • When a piece is placed anywhere outside the Y axis, then RuntimeException is thrown.
  * • When a piece is placed on an occupied space, then RuntimeException is thrown.
+ *
+ * Requirement 2
+ *
+ * There should be a way to find out which player should play next.
+ *
+ * We can split this requirement into three tests:
+ * • The first turn should be played by played X
+ * • If the last turn was played by X, then the next turn should be played by O
+ * • If the last turn was played by O, then the next turn should be played by X
  */
 public class TicTacToeSpec {
 
@@ -39,7 +53,6 @@ public class TicTacToeSpec {
         ticTacToe.play(5, 2);
     }
 
-
     /**
      * When a piece is placed anywhere outside the Y axis, then RuntimeException is thrown.
      */
@@ -48,7 +61,6 @@ public class TicTacToeSpec {
         exception.expect(RuntimeException.class);
         ticTacToe.play(2, 5);
     }
-
 
     /**
      * When a piece is placed on an occupied space, then RuntimeException is thrown.
@@ -59,6 +71,22 @@ public class TicTacToeSpec {
         exception.expect(RuntimeException.class);
         ticTacToe.play(2, 1);
     }
+
+    /**
+     * The first turn should be played by played X
+     */
+    @Test
+    public void givenFirstTurnWhenNextPlayerThenX() {
+        assertEquals('X', ticTacToe.nextPlayer());
+    }
+
+    /**
+     * If the last turn was played by X, then the next turn should be played by O
+     */
+
+    /**
+     * If the last turn was played by O, then the next turn should be played by X
+     */
 
 
 }
