@@ -27,38 +27,38 @@ public class Location {
         this.point = point;
     }
 
-    public boolean forward() {
+    public boolean forward(Point max) {
         switch (getDirection()) {
             case EAST:
-                point.setX(point.getX() + 1);
+                point.setX(wrap(point.getX() + 1, max.getX()));
                 break;
             case WEST:
-                point.setX(point.getX() - 1);
+                point.setX(wrap(point.getX() - 1, max.getX()));
                 break;
             case NORTH:
-                point.setY(point.getY() + 1);
+                point.setY(wrap(point.getY() + 1, max.getY()));
                 break;
             case SOUTH:
-                point.setY(point.getY() - 1);
+                point.setY(wrap(point.getY() - 1, max.getY()));
                 break;
             case NONE:
         }
         return true;
     }
 
-    public boolean backward() {
+    public boolean backward(Point max) {
         switch (getDirection()) {
             case EAST:
-                point.setX(point.getX() - 1);
+                point.setX(wrap(point.getX() - 1, max.getX()));
                 break;
             case WEST:
-                point.setX(point.getX() + 1);
+                point.setX(wrap(point.getX() + 1, max.getX()));
                 break;
             case NORTH:
-                point.setY(point.getY() - 1);
+                point.setY(wrap(point.getY() - 1, max.getY()));
                 break;
             case SOUTH:
-                point.setY(point.getY() + 1);
+                point.setY(wrap(point.getY() + 1, max.getY()));
                 break;
             case NONE:
         }
@@ -71,5 +71,16 @@ public class Location {
 
     public void turnRight() {
         this.direction = direction.turnRight();
+    }
+
+    public int wrap(int point, int maxPoint){
+        if (maxPoint > 0) {
+            if (point > maxPoint) {
+                return 1;
+            } else if (point == 0) {
+                return maxPoint;
+            }
+        }
+        return point;
     }
 }

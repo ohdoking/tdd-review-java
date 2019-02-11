@@ -1,16 +1,12 @@
 package com.ohdoking.tddjava.ch04ship;
 
 public class Planet {
-    Point point;
+    Point max;
     public Planet(Point max) {
-        this.point = max;
+        this.max = max;
     }
 
-    public Point getPoint() {
-        return point;
-    }
-
-    public void setPoint(Point point) {
-        this.point = point;
+    public Point getMax() {
+        return max;
     }
 }

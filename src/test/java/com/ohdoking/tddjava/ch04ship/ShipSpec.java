@@ -34,11 +34,12 @@ public class ShipSpec {
 
     private Ship ship;
     private Location location;
+    private Planet planet;
 
     @Before
     public void beforeTest() {
         Point max = new Point(50, 50);
-        Planet planet = new Planet(max);
+        planet = new Planet(max);
         location = new Location(
                 new Point(21, 13), Direction.NORTH);
         ship = new Ship(location, planet);
@@ -141,6 +142,18 @@ public class ShipSpec {
         Planet planet = new Planet(max);
         ship = new Ship(location, planet);
         assertEquals(ship.getPlanet(), planet);
+    }
+
+    /**
+     * The name of this method has been shortened due to line's length restrictions.
+     * The aim of this test is to check the behavior of ship when it is told to overpass the right boundary.
+     */
+    @Test
+    public void overpassEastBoundary() {
+        location.setDirection(Direction.EAST);
+        location.getPoint().setX(planet.getMax().getX());
+        ship.receiveCommands("f");
+        assertEquals(location.getPoint().getX(), 1);
     }
 
 
