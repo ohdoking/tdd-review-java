@@ -7,8 +7,8 @@ public enum Direction {
     WEST(3, 'W'),
     NONE(4, 'X');
 
-    private int index;
-    private char cardinalPoint;
+    private final int index;
+    private final char cardinalPoint;
 
     Direction(int index, char cardinalPoint) {
         this.index = index;
@@ -21,5 +21,15 @@ public enum Direction {
 
     public char getCardinalPoint() {
         return cardinalPoint;
+    }
+
+    public Direction turnLeft() {
+        int value = (index + 3) % 4;
+        return Direction.values()[value];
+    }
+
+    public Direction turnRight() {
+        int value = (index + 1) % 4;
+        return Direction.values()[value];
     }
 }

@@ -64,4 +64,12 @@ public class Location {
         }
         return true;
     }
+
+    public void turnLeft() {
+        this.direction = direction.turnLeft();
+    }
+
+    public void turnRight() {
+        this.direction = direction.turnRight();
+    }
 }
