@@ -15,7 +15,20 @@
 - Functional and acceptance tests have a job to verify that the application we're building works as expected, as a whole.
 - Integration tests intend to verify that separate units, modules, applications, or even whole systems are properly integrated with each othe
 
+## JaCoCo
 
+Java Code Coverage (JaCoCo) is a well-known tool for measuring test coverage.
+
+### How to use Jacoco
+
+add *build.gradle*
+'''
+apply plugin: 'jacoco'
+// need to over JDK 11(https://github.com/vaskoz/core-java9-impatient/issues/11)
+jacoco {
+    toolVersion = "0.8.2"
+}
+'''
  
 ## TIP
 
