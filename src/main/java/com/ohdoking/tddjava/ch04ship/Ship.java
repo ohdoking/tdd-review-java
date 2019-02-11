@@ -3,9 +3,15 @@ package com.ohdoking.tddjava.ch04ship;
 public class Ship {
 
     private Location location;
+    private Planet planet;
 
     public Ship(Location location) {
         this.location = location;
+    }
+
+    public Ship(Location location, Planet planet) {
+        this.location = location;
+        this.planet = planet;
     }
 
     public Location getLocation() {
@@ -19,6 +25,18 @@ public class Ship {
     public boolean moveBackward() {
         return location.backward();
     }
+
+    public Planet getPlanet() {
+        return planet;
+    }
+
+    public void setPlanet(Planet planet) {
+        this.planet = planet;
+    }
+
+    /**
+     * function
+     */
 
     public void turnLeft() {
         location.turnLeft();

@@ -25,6 +25,10 @@ import static org.junit.Assert.*;
  * Requirement 4
  *
  * The ship can receive a string with commands (lrfb is equivalent to left, right, forward, and backward).
+ *
+ * Requirement 5
+ *
+ * Implement wrapping from one edge of the grid to another.
  */
 public class ShipSpec {
 
@@ -124,6 +128,17 @@ public class ShipSpec {
         assertEquals(ship.getLocation().getDirection(), Direction.NORTH);
         assertEquals(ship.getLocation().getPoint().getX(), 22);
         assertEquals(ship.getLocation().getPoint().getY(), 12);
+    }
+
+    /**
+     * Implement wrapping from one edge of the grid to another.
+     */
+    @Test
+    public void whenInstantiatedThenPlanetIsStored() {
+        Point max = new Point(50, 50);
+        Planet planet = new Planet(max);
+        ship = new Ship(location, planet);
+        assertEquals(ship.getPlanet(), planet);
     }
 
 
