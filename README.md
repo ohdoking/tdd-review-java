@@ -22,6 +22,7 @@ Java Code Coverage (JaCoCo) is a well-known tool for measuring test coverage.
 ### How to use Jacoco
 
 add *build.gradle*
+
 '''
 apply plugin: 'jacoco'
 // need to over JDK 11(https://github.com/vaskoz/core-java9-impatient/issues/11)
@@ -29,6 +30,7 @@ jacoco {
     toolVersion = "0.8.2"
 }
 '''
+
 
 ![JaCoCo](https://user-images.githubusercontent.com/4298268/52576042-a6dee480-2e1f-11e9-98ea-2bfa5b94f47a.png)
  
