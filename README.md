@@ -45,3 +45,26 @@ Do NOT rely only on comments to provide information about test objectives. Comme
 The benefits of doing this are as follows: it ensures that testable code is written and ensures that every line of code gets tests written for it.
 By writing or modifying the test first, the developer is focused on requirements before starting to work on a code. This is
 the main difference when compared to writing tests after the implementation is done. An additional benefit is that with tests first, we are avoiding the danger that the tests work as quality checking instead of quality assurance.
+
+### Rerun all the tests every time the implementation code changes.
+
+This ensures that there is no unexpected side-effect caused by code changes.
+Every time any part of the implementation code changes, all tests should be run. Ideally, tests are fast to execute and can be run by a developer locally. Once code is submitted to the version control, all tests should be run again to ensure that there was no problem due to code merges. This is especially important when more than one developer is working on the code. Continuous Integration tools such as Jenkins, Hudson, Travind, Bamboo and Go-CD should be used to pull the code from the repository, compile it, and run tests.
+
+### Write the simplest code to pass the test. This ensures a cleaner and clearer design and avoids unnecessary features
+
+The idea is that the simpler the implementation, the better and easier it is to maintain the product.
+The idea adheres to the KISS principle. It states that most systems work best if they are kept simple rather than made complex; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided.
+
+### Refactor only after all the tests have passed.
+
+Benefits: refactoring is safe
+
+If all the implementation code that can be affected has tests and if they are all passing, it is relatively safe to refactor.
+In most cases, there is no need for new tests;
+small modifications to existing tests should be enough.
+The expected outcome of refactoring is to have all the tests passing both before and after the code is modified.
+
+
+
+
