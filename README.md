@@ -29,6 +29,8 @@ jacoco {
     toolVersion = "0.8.2"
 }
 '''
+
+![JaCoCo](https://user-images.githubusercontent.com/4298268/52576042-a6dee480-2e1f-11e9-98ea-2bfa5b94f47a.png)
  
 ## TIP
 
