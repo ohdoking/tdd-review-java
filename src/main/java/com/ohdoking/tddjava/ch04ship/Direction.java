@@ -23,6 +23,15 @@ public enum Direction {
         return cardinalPoint;
     }
 
+    public static Direction getFromShortName(final char cardinalPoint) {
+        for (Direction direction : Direction.values()) {
+            if (direction.cardinalPoint == cardinalPoint) {
+                return direction;
+            }
+        }
+        return Direction.NONE;
+    }
+
     public Direction turnLeft() {
         int value = (index + 3) % 4;
         return Direction.values()[value];

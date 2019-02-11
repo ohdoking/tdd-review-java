@@ -3,6 +3,9 @@ package com.ohdoking.tddjava.ch04ship;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -29,6 +32,17 @@ import static org.junit.Assert.*;
  * Requirement 5
  *
  * Implement wrapping from one edge of the grid to another.
+ *
+ * Requirement 6
+ *
+ * Implement surface detection before each move to a new position.
+ * If a command encounters a surface, the ship aborts the move, stays on the current position, and reports the obstacle.
+ *
+ * • The Planet object has the constructor that accepts a list of obstacles. Each obstacle is an instance of the Point class.
+ * • The Location.foward and Location.backward methods have overloaded versions that accept a list of obstacles. They return true if a move was successful and false if it failed. Use this Boolean to construct a status report required for the Ship.receiveCommands method.
+ * • The receiveCommands method should return a string with the status of each command. 0 can represent OK and X can be for a failure to move (OOXO = OK, OK, Failure, OK).
+ *
+ *
  */
 public class ShipSpec {
 
@@ -39,9 +53,12 @@ public class ShipSpec {
     @Before
     public void beforeTest() {
         Point max = new Point(50, 50);
-        planet = new Planet(max);
-        location = new Location(
-                new Point(21, 13), Direction.NORTH);
+        location = new Location(new Point(21, 13), Direction.NORTH);
+        List<Point> obstacles = new ArrayList<>();
+        obstacles.add(new Point(44, 44));
+        obstacles.add(new Point(45, 46));
+        planet = new Planet(max, obstacles);
+//        ship = new Ship(location);
         ship = new Ship(location, planet);
     }
 
@@ -59,7 +76,7 @@ public class ShipSpec {
     @Test
     public void givenNorthWhenMoveForwardThenYIncreases(){
         ship.moveForward();
-        assertEquals(ship.getLocation().getPoint().getY(), 14);
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
     }
 
     @Test
@@ -72,7 +89,7 @@ public class ShipSpec {
     @Test
     public void givenNorthWhenMoveBackwardThenYDecreases(){
         ship.moveBackward();
-        assertEquals(ship.getLocation().getPoint().getY(), 12);
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     @Test
@@ -104,13 +121,13 @@ public class ShipSpec {
     @Test
     public void givenNorthwhenReceiveCommandsFThenYIncreases() {
         ship.receiveCommands("f");
-        assertEquals(ship.getLocation().getPoint().getY(), 14);
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
     }
 
     @Test
     public void givenNorthWhenReceiveCommandsBThenYDecrease(){
         ship.receiveCommands("b");
-        assertEquals(ship.getLocation().getPoint().getY(), 12);
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     @Test
@@ -130,7 +147,7 @@ public class ShipSpec {
         ship.receiveCommands("rflb");
         assertEquals(ship.getLocation().getDirection(), Direction.NORTH);
         assertEquals(ship.getLocation().getPoint().getX(), 22);
-        assertEquals(ship.getLocation().getPoint().getY(), 12);
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     /**
@@ -155,6 +172,33 @@ public class ShipSpec {
         ship.receiveCommands("f");
         assertEquals(location.getPoint().getX(), 1);
     }
+
+    /**
+     * Implement surface detection before each move to a new position.
+     * If a command encounters a surface, the ship aborts the move, stays on the current position, and reports the obstacle.
+     */
+    @Test
+    public void whenReceiveCommandsThenStopOnObstacle() {
+        List<Point> obstacles = new ArrayList<>();
+        obstacles.add(new Point(location.getPoint().getX() + 1, location.getPoint().getY()));
+        ship.getPlanet().setObstacles(obstacles);
+        // Moving forward would encounter an obstacle
+        // expected.forward(new Point(0, 0), new ArrayList<Point>());
+        ship.receiveCommands("rflb");
+        assertEquals(ship.getLocation().getDirection(), Direction.NORTH);
+        assertEquals(ship.getLocation().getPoint().getX(), 21);
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
+    }
+
+    @Test
+    public void whenReceiveCommandsThenOForOkAndXForObstacle() {
+        List<Point> obstacles = new ArrayList<>();
+        obstacles.add(new Point(location.getPoint().getX() + 1, location.getPoint().getY()));
+        ship.getPlanet().setObstacles(obstacles);
+        String status = ship.receiveCommands("rflb");
+        assertEquals(status, "OXOO");
+    }
+
 
 
 }
