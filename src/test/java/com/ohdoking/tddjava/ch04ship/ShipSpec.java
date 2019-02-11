@@ -37,9 +37,11 @@ public class ShipSpec {
 
     @Before
     public void beforeTest() {
+        Point max = new Point(50, 50);
+        Planet planet = new Planet(max);
         location = new Location(
                 new Point(21, 13), Direction.NORTH);
-        ship = new Ship(location);
+        ship = new Ship(location, planet);
     }
 
     /**
