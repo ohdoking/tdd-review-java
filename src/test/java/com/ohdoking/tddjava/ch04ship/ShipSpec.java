@@ -42,17 +42,31 @@ public class ShipSpec {
      * Implement commands that move the ship forward and backward (f and b).
      */
     @Test
-    public void givenNorthWhenMoveForwardThenYDecreases(){
+    public void givenNorthWhenMoveForwardThenYIncreases(){
         ship.moveForward();
         assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     @Test
-    public void givenEastWhenMoveForwardThenXDecreases(){
+    public void givenEastWhenMoveForwardThenXIncreases(){
         ship.getLocation().setDirection(Direction.EAST);
         ship.moveForward();
         assertEquals(ship.getLocation().getPoint().getX(), 22);
     }
+
+    @Test
+    public void givenNorthWhenMoveBackwardThenYDecreases(){
+        ship.moveBackward();
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
+    }
+
+    @Test
+    public void givenEastWhenMoveBackwardThenXDecreases(){
+        ship.getLocation().setDirection(Direction.EAST);
+        ship.moveBackward();
+        assertEquals(ship.getLocation().getPoint().getX(), 20);
+    }
+
 
 
 

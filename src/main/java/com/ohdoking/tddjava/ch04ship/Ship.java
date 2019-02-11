@@ -15,4 +15,8 @@ public class Ship {
     public boolean moveForward() {
         return location.forward();
     }
+
+    public boolean moveBackward() {
+        return location.backward();
+    }
 }

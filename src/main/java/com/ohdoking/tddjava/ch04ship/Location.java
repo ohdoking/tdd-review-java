@@ -28,18 +28,37 @@ public class Location {
     }
 
     public boolean forward() {
-        switch (getDirection()){
+        switch (getDirection()) {
             case EAST:
-                point.setX(point.getX()+1);
+                point.setX(point.getX() + 1);
                 break;
             case WEST:
-                point.setX(point.getX()-1);
+                point.setX(point.getX() - 1);
                 break;
             case NORTH:
-                point.setY(point.getY()+1);
+                point.setY(point.getY() + 1);
                 break;
             case SOUTH:
-                point.setY(point.getY()-1);
+                point.setY(point.getY() - 1);
+                break;
+            case NONE:
+        }
+        return true;
+    }
+
+    public boolean backward() {
+        switch (getDirection()) {
+            case EAST:
+                point.setX(point.getX() - 1);
+                break;
+            case WEST:
+                point.setX(point.getX() + 1);
+                break;
+            case NORTH:
+                point.setY(point.getY() - 1);
+                break;
+            case SOUTH:
+                point.setY(point.getY() + 1);
                 break;
             case NONE:
         }
