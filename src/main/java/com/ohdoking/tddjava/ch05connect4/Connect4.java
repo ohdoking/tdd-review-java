@@ -25,10 +25,13 @@ public class Connect4 {
 
     public int putDiscInColumn(int column) {
         int index = 0;
-        if(column < 0){
+        if(column < 0 || column >= COLUMNS){
             throw new RuntimeException("Invalid column " + column);
         }
         for(int i = 0 ; i < board.length; i++){
+            if(board.length == i + 1 && !board[i][column].equals(EMPTY)){
+                throw new RuntimeException("No more room in column " + column);
+            }
             if(board[i][column].equals(EMPTY)){
                 board[i][column] = "0";
                 index = i;

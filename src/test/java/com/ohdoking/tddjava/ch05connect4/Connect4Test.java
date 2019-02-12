@@ -96,4 +96,22 @@ public class Connect4Test {
         assertThat(connect4.getNumberOfDiscs(), is(1));
     }
 
+    /**
+     * When a disc is inserted in to a column and there's no room available for it,
+     * then a Runtime Exception is thrown
+     */
+    @Test
+    public void whenNoMoreRoomInColumnThenRuntimeException(){
+        int column = 1;
+        int maxDiscsInColumn = 6; // the number of rows
+        for (int times = 0 ; times < maxDiscsInColumn ; ++times) {
+            connect4.putDiscInColumn(column);
+        }
+        exception.expect(RuntimeException.class);
+        exception.expectMessage("No more room in column " +
+                        column);
+        connect4.putDiscInColumn(column);
+    }
+
+
 }
