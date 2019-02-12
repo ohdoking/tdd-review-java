@@ -161,4 +161,22 @@ public class Connect4Test {
         assertThat(output.toString(), containsString("| |R| | | | | |"));
     }
 
+    /**
+     * When no more discs can be inserted, the game finishes and it is considered a draw.
+     */
+    @Test
+    public void whenTheGameStartsItIsNotFinished() {
+        assertFalse("The game must not be finished", connect4.isFinished());
+    }
+
+    @Test
+    public void whenNoDiscCanBeIntroducedTheGamesIsFinished() {
+        for (int row = 0; row < 6; row++){
+            for (int column = 0; column < 7; column++){
+                connect4.putDiscInColumn(column);
+            }
+        }
+        assertTrue("The game must be finished", connect4.isFinished());
+    }
+
 }
