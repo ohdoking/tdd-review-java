@@ -1,6 +1,7 @@
 package com.ohdoking.tddjava.ch05connect4;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Connect4 {
 
@@ -10,36 +11,40 @@ public class Connect4 {
 
     String[][] board = new String[ROWS][COLUMNS];
 
-    int totalNumber = 0;
-
     public Connect4() {
         for (String[] row : board){
             Arrays.fill(row, EMPTY);
         }
-
     }
 
     public int getNumberOfDiscs() {
-        return totalNumber;
+        return IntStream.range(0, COLUMNS)
+                .map(this::getNumberOfDiscsInColumn).sum();
+    }
+
+    private int getNumberOfDiscsInColumn(int column) {
+        return (int) IntStream.range(0, ROWS)
+                .filter(row -> !EMPTY.equals(board[row][column]))
+                .count();
     }
 
     public int putDiscInColumn(int column) {
-        int index = 0;
-        if(column < 0 || column >= COLUMNS){
+        checkColumn(column);
+        int row = getNumberOfDiscsInColumn(column);
+        checkPositionToInsert(row, column);
+        board[row][column] = "X";
+        return row;
+    }
+
+    private void checkColumn(int column) {
+        if (column < 0 || column >= COLUMNS){
             throw new RuntimeException("Invalid column " + column);
         }
-        for(int i = 0 ; i < board.length; i++){
-            if(board.length == i + 1 && !board[i][column].equals(EMPTY)){
-                throw new RuntimeException("No more room in column " + column);
-            }
-            if(board[i][column].equals(EMPTY)){
-                board[i][column] = "0";
-                index = i;
-                totalNumber++;
-                break;
-            }
-        }
+    }
 
-        return index;
+    private void checkPositionToInsert(int row, int column) {
+        if (row == ROWS){
+            throw new RuntimeException("No more room in column " + column);
+        }
     }
 }
