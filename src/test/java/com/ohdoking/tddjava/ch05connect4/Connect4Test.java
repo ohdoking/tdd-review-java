@@ -56,7 +56,7 @@ public class Connect4Test {
     }
 
     /**
-     * When a disc is inserted into an empty column, its position is 0
+     * When a disc is put outside the boundaries, a Runtime Exception is thrown
      */
     @Test
     public void whenDiscOutsideBoardThenRuntimeException(){
@@ -65,6 +65,25 @@ public class Connect4Test {
         exception.expect(RuntimeException.class);
         exception.expectMessage("Invalid column " + column);
         connect4.putDiscInColumn(column);
+    }
+
+    /**
+     * When a disc is inserted into an empty column, its position is 0
+     */
+    @Test
+    public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
+        int column = 1;
+        assertThat(connect4.putDiscInColumn(column), is(0));
+    }
+
+    /**
+     * When a second disc is inserted into the same column, its position is 1
+     */
+    @Test
+    public void whenSecondDiscInsertedInColumnThenPositionIsOne() {
+        int column = 1;
+        connect4.putDiscInColumn(column);
+        assertThat(connect4.putDiscInColumn(column), is(1));
     }
 
 }
