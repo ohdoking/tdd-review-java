@@ -194,4 +194,42 @@ public class Connect4Test {
         assertThat(connect4.getWinner(), is("R"));
     }
 
+    /**
+     * If a player inserts a disc and connects more than three discs of his color in a straight horizontal line, then that player wins.
+     */
+    @Test
+    public void when4HorizontalDiscsAreConnectedThenPlayerWins() {
+        int column;
+        for (column = 0; column < 3; column++) {
+            connect4.putDiscInColumn(column); // R
+            connect4.putDiscInColumn(column); // G
+        }
+        assertThat(connect4.getWinner(), is(""));
+        connect4.putDiscInColumn(column); // R
+        assertThat(connect4.getWinner(), is("R"));
+    }
+
+    /**
+     * If a player inserts a disc and connects more than three discs of his colour in a straight diagonal line, then that player wins.
+     */
+    @Test
+    public void when4Diagonal1DiscsAreConnectedThenThatPlayerWins()
+    {
+        int[] gameplay = new int[] {1, 2, 2, 3, 4, 3, 3, 4, 4, 5, 4};
+        for (int column : gameplay) {
+            connect4.putDiscInColumn(column);
+        }
+        assertThat(connect4.getWinner(), is("R"));
+    }
+
+    @Test
+    public void when4Diagonal2DiscsAreConnectedThenThatPlayerWins()
+    {
+        int[] gameplay = new int[] {3, 4, 2, 3, 2, 2, 1, 1, 1, 1};
+        for (int column : gameplay) {
+            connect4.putDiscInColumn(column);
+        }
+        assertThat(connect4.getWinner(), is("G"));
+    }
+
 }
