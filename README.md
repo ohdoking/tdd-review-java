@@ -23,17 +23,55 @@ Java Code Coverage (JaCoCo) is a well-known tool for measuring test coverage.
 
 add *build.gradle*
 
-'''
+```
 apply plugin: 'jacoco'
 // need to over JDK 11(https://github.com/vaskoz/core-java9-impatient/issues/11)
 jacoco {
     toolVersion = "0.8.2"
 }
-'''
+```
 
 
 ![JaCoCo](https://user-images.githubusercontent.com/4298268/52576042-a6dee480-2e1f-11e9-98ea-2bfa5b94f47a.png)
- 
+
+## Design principles
+
+### You Ain't Gonna Need It
+
+YAGNI is the acronym for the You Ain't Gonna Need It principle.
+It aims to erase all unnecessary code and focuses on the current functionalities, not the future ones.
+The less code you have, the less code you're going to maintain and the less probability that bugs are introduced.
+
+### Don't Repeat Yourself
+
+The idea behind the Don't Repeat Yourself (DRY) principle is to reuse the code you previously wrote instead of repeating it.
+The benefits are less code to maintain and the use of code that you know that already works, which is a great thing.
+It helps you to discover new abstraction levels inside your code.
+
+### Keep It Simple, Stupid
+
+This principle has the confusing acronym of KISS and states that things perform their function better if they are kept simple rather than complicated.
+It was coined by Kelly Johnson.
+
+### Occam's Razor
+Although Occam's Razor is not a software engineering principle but a philosophical one, it is still applicable to what we do, and is very similar to the previous principle with the main derived statement being as follows:
+
+```
+    "When you have two competing solutions to the same problem, the simpler one is the better."
+```
+
+### SOLID
+
+The word SOLID is an acronym invented by Robert C.
+Martin for the five basic principles of object-oriented programming.
+By following these five principles, a developer is more likely to create a great, durable, and maintainable application:
+
+• Single Responsibility Principle: A class should have only a single reason to change.
+• Open-Closed Principle: A class should be open for extension and closed for modification. This is attributed to Bertrand Meyer.
+• Liskov Substitution Principle: This was created by Barbara Liskov, and she says a class should be replaceable by others that extend that class.
+• Interface Segregation Principle: A few specific interfaces are preferable than one general-purpose interface.
+• Dependency Inversion Principle: A class should depend on abstraction instead of implementation. This means that class dependencies must be focused on what is done and forget about how it is done.
+
 ## TIP
 
 ### Use descriptive names for test methods
