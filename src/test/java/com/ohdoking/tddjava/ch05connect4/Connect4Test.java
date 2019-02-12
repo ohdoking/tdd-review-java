@@ -4,7 +4,14 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.rules.Timeout;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
+
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
@@ -42,9 +49,15 @@ public class Connect4Test {
     @Rule
     public ExpectedException exception = ExpectedException.none();
 
+    @Rule
+    public Timeout testRule = new Timeout(1000, TimeUnit.MILLISECONDS);
+
+    private OutputStream output;
+
     @Before
     public void beforeEachTest(){
-        connect4 = new Connect4();
+        output = new ByteArrayOutputStream();
+        connect4 = new Connect4(new PrintStream(output));
     }
 
     /**
@@ -129,6 +142,23 @@ public class Connect4Test {
         int column = 1;
         connect4.putDiscInColumn(column);
         assertThat(connect4.getCurrentPlayer(), is("G"));
+    }
+
+    /**
+     * We want feedback when either an event or an error occurs within the game.
+     * The output shows the status of the board on every move.
+     */
+    @Test
+    public void whenAskedForCurrentPlayerTheOutputNotice() {
+        connect4.getCurrentPlayer();
+        assertThat(output.toString(), containsString("Player R turn"));
+    }
+
+    @Test
+    public void whenADiscIsIntroducedTheBoardIsPrinted() {
+        int column = 1;
+        connect4.putDiscInColumn(column);
+        assertThat(output.toString(), containsString("| |R| | | | | |"));
     }
 
 }

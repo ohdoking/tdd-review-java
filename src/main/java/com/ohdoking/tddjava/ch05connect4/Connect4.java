@@ -1,7 +1,10 @@
 package com.ohdoking.tddjava.ch05connect4;
 
+import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.StringJoiner;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Connect4 {
 
@@ -15,7 +18,12 @@ public class Connect4 {
     private static final String GREEN = "G";
     private String currentPlayer = RED;
 
-    public Connect4() {
+    PrintStream outputChannel;
+
+    private static final String DELIMITER = "|";
+
+    public Connect4(PrintStream printStream) {
+        outputChannel = printStream;
         for (String[] row : board){
             Arrays.fill(row, EMPTY);
         }
@@ -37,6 +45,7 @@ public class Connect4 {
         int row = getNumberOfDiscsInColumn(column);
         checkPositionToInsert(row, column);
         board[row][column] = getCurrentPlayer();
+        printBoard();
         switchPlayer();
         return row;
     }
@@ -53,14 +62,25 @@ public class Connect4 {
         }
     }
 
-    public String getCurrentPlayer() {
-        return currentPlayer;
-    }
-
     private void switchPlayer() {
         if (RED.equals(currentPlayer)){
             currentPlayer = GREEN;
         }
-        else currentPlayer = RED;
+        else {
+            currentPlayer = RED;
+        }
+    }
+
+    public String getCurrentPlayer() {
+        outputChannel.printf("Player %s turn%n", currentPlayer);
+        return currentPlayer;
+    }
+
+    private void printBoard() {
+        for (int row = ROWS - 1 ; row >= 0 ; row--) {
+            StringJoiner stringJoiner = new StringJoiner(DELIMITER, DELIMITER, DELIMITER);
+            Stream.of(board[row]).forEachOrdered(stringJoiner::add);
+            outputChannel.println(stringJoiner.toString());
+        }
     }
 }
