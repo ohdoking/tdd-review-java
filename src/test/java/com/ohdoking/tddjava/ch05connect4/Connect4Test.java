@@ -179,4 +179,19 @@ public class Connect4Test {
         assertTrue("The game must be finished", connect4.isFinished());
     }
 
+    /**
+     * If a player inserts a disc and connects more than three discs of his color in a straight vertical line,
+     * then that player wins.
+     */
+    @Test
+    public void when4VerticalDiscsAreConnectedThenPlayerWins() {
+        for (int row = 0; row < 3; row++) {
+            connect4.putDiscInColumn(1); // R
+            connect4.putDiscInColumn(2); // G
+        }
+        assertThat(connect4.getWinner(), is(""));
+        connect4.putDiscInColumn(1); // R
+        assertThat(connect4.getWinner(), is("R"));
+    }
+
 }
