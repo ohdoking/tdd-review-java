@@ -10,6 +10,8 @@ public class Connect4 {
 
     String[][] board = new String[ROWS][COLUMNS];
 
+    int totalNumber = 0;
+
     public Connect4() {
         for (String[] row : board){
             Arrays.fill(row, EMPTY);
@@ -18,7 +20,7 @@ public class Connect4 {
     }
 
     public int getNumberOfDiscs() {
-        return 0;
+        return totalNumber;
     }
 
     public int putDiscInColumn(int column) {
@@ -30,6 +32,7 @@ public class Connect4 {
             if(board[i][column].equals(EMPTY)){
                 board[i][column] = "0";
                 index = i;
+                totalNumber++;
                 break;
             }
         }

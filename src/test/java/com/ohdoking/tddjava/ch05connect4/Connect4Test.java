@@ -86,4 +86,14 @@ public class Connect4Test {
         assertThat(connect4.putDiscInColumn(column), is(1));
     }
 
+    /**
+     * When a disc is inserted into the board, the total number of discs increases
+     */
+    @Test
+    public void whenDiskInsertedThenNumberOfDiscsIncreases(){
+        int column = 1;
+        connect4.putDiscInColumn(column);
+        assertThat(connect4.getNumberOfDiscs(), is(1));
+    }
+
 }
