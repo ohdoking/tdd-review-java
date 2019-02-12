@@ -113,5 +113,22 @@ public class Connect4Test {
         connect4.putDiscInColumn(column);
     }
 
+    /**
+     * It is a two-person game, so there is one colour for each player.
+     * One player uses red ('R') and the other one uses green ('G').
+     * Players alternate turns, inserting one disc every time.
+     */
+
+    @Test
+    public void whenFirstPlayerPlaysThenDiscColorIsRed() {
+        assertThat(connect4.getCurrentPlayer(), is("R"));
+    }
+
+    @Test
+    public void whenSecondPlayerPlaysThenDiscColorIsRed() {
+        int column = 1;
+        connect4.putDiscInColumn(column);
+        assertThat(connect4.getCurrentPlayer(), is("G"));
+    }
 
 }

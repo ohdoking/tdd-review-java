@@ -11,6 +11,10 @@ public class Connect4 {
 
     String[][] board = new String[ROWS][COLUMNS];
 
+    private static final String RED = "R";
+    private static final String GREEN = "G";
+    private String currentPlayer = RED;
+
     public Connect4() {
         for (String[] row : board){
             Arrays.fill(row, EMPTY);
@@ -32,7 +36,8 @@ public class Connect4 {
         checkColumn(column);
         int row = getNumberOfDiscsInColumn(column);
         checkPositionToInsert(row, column);
-        board[row][column] = "X";
+        board[row][column] = getCurrentPlayer();
+        switchPlayer();
         return row;
     }
 
@@ -46,5 +51,16 @@ public class Connect4 {
         if (row == ROWS){
             throw new RuntimeException("No more room in column " + column);
         }
+    }
+
+    public String getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    private void switchPlayer() {
+        if (RED.equals(currentPlayer)){
+            currentPlayer = GREEN;
+        }
+        else currentPlayer = RED;
     }
 }
