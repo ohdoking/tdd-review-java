@@ -10,9 +10,6 @@ import static org.junit.Assert.*;
 /**
  * TictactoeMongoTest
  *
- * Requirement 1
- *
- * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
  */
 public class TictactoeMongoSpec {
 
@@ -116,7 +113,5 @@ public class TictactoeMongoSpec {
         String actual = ticTacToe.play(3, 2);
         assertEquals("The result is draw", actual);
     }
-
-    
 
 }
