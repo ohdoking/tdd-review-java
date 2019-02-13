@@ -16,6 +16,10 @@ import static org.mockito.Mockito.*;
  * Requirement 1
  *
  * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
+ *
+ * Requirement 2
+ *
+ * Save each turn to the database and make sure that a new session cleans the old data.
  */
 public class TicTacToeCollectionSpec {
 
@@ -46,6 +50,9 @@ public class TicTacToeCollectionSpec {
 
     /**
      * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
+     */
+    /**
+     * Save
      */
     @Test
     public void whenSaveMoveThenInvokeMongoCollectionSave() {
@@ -78,6 +85,9 @@ public class TicTacToeCollectionSpec {
         assertFalse(collection.saveMove(bean));
     }
 
+    /**
+     * Drop
+     */
     @Test
     public void whenDropThenInvokeMongoCollectionDrop() {
         doReturn(mongoCollection)
@@ -105,5 +115,7 @@ public class TicTacToeCollectionSpec {
                 .getMongoCollection();
         assertFalse(collection.drop());
     }
+
+
 
 }

@@ -1,11 +1,16 @@
 package com.ohdoking.tddjava.ch06tictactoe;
 
+import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeBean;
+import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeCollection;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.net.UnknownHostException;
+
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 /**
  * TictactoeMongoTest
@@ -17,9 +22,12 @@ public class TictactoeMongoSpec {
     public ExpectedException exception = ExpectedException.none();
     private TictactoeMongo ticTacToe;
 
+    private TicTacToeCollection collection;
+
     @Before
-    public final void before() {
-        ticTacToe = new TictactoeMongo();
+    public final void before(){
+        collection = mock(TicTacToeCollection.class);
+        ticTacToe = new TictactoeMongo(collection);
     }
 
     @Test
@@ -113,5 +121,25 @@ public class TictactoeMongoSpec {
         String actual = ticTacToe.play(3, 2);
         assertEquals("The result is draw", actual);
     }
+
+    /**
+     * Save each turn to the database and make sure that a new session cleans the old data.
+     */
+    @Test
+    public void whenInstantiatedThenSetCollection() {
+        assertNotNull(ticTacToe.getTicTacToeCollection());
+    }
+
+    @Test
+    public void whenPlayThenSaveMoveIsInvoked() {
+        //First, we are instantiating a TicTacToeBean since it contains data that our collections expect:
+        TicTacToeBean move = new TicTacToeBean(1, 1, 3, 'X');
+        //Next, it is time to play an actual turn:
+        ticTacToe.play(move.getX(), move.getY());
+        //Finally, we need to verify that the saveMove method is really invoked:
+        verify(collection, times(1)).saveMove(move);
+
+    }
+
 
 }

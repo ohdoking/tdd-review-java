@@ -1,5 +1,10 @@
 package com.ohdoking.tddjava.ch06tictactoe;
 
+import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeBean;
+import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeCollection;
+
+import java.net.UnknownHostException;
+
 public class TictactoeMongo {
 
     private Character[][] board = {{'\0', '\0', '\0'}, {'\0', '\0', '\0'}, {'\0', '\0', '\0'}};
@@ -8,11 +13,21 @@ public class TictactoeMongo {
     public static final String NO_WINNER = "No winner";
     public static final String RESULT_DRAW = "The result is draw";
 
+    private TicTacToeCollection ticTacToeCollection;
+
+    public TictactoeMongo() throws UnknownHostException {
+        this(new TicTacToeCollection());
+    }
+
+    public TictactoeMongo(TicTacToeCollection ticTacToeCollection) {
+        this.ticTacToeCollection = ticTacToeCollection;
+    }
+
     public String play(int x, int y) {
         checkAxis(x);
         checkAxis(y);
         lastPlayer = nextPlayer();
-        setBox(x, y, lastPlayer);
+        setBox(new TicTacToeBean(1, x, y, lastPlayer));
         if (isWin(x, y)) {
             return lastPlayer + " is the winner";
         } else if (isDraw()) {
@@ -35,11 +50,12 @@ public class TictactoeMongo {
         }
     }
 
-    private void setBox(int x, int y, char lastPlayer) {
-        if (board[x - 1][y - 1] != '\0') {
+    private void setBox(TicTacToeBean bean) {
+        if (board[bean.getX() - 1][bean.getY() - 1] != '\0') {
             throw new RuntimeException("Box is occupied");
         } else {
-            board[x - 1][y - 1] = lastPlayer;
+            board[bean.getX() - 1][bean.getY() - 1] = lastPlayer;
+            getTicTacToeCollection().saveMove(bean);
         }
     }
 
@@ -73,4 +89,7 @@ public class TictactoeMongo {
         return true;
     }
 
+    public TicTacToeCollection getTicTacToeCollection() {
+        return ticTacToeCollection;
+    }
 }
