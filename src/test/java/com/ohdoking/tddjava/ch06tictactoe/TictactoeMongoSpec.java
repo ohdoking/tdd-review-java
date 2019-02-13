@@ -14,8 +14,8 @@ import static org.junit.Assert.*;
  *
  * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
  */
-public class TictactoeMongoTest {
-    
+public class TictactoeMongoSpec {
+
     @Rule
     public ExpectedException exception = ExpectedException.none();
     private TictactoeMongo ticTacToe;
@@ -116,5 +116,7 @@ public class TictactoeMongoTest {
         String actual = ticTacToe.play(3, 2);
         assertEquals("The result is draw", actual);
     }
+
+    
 
 }
