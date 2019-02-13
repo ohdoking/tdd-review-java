@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class TicTacToeInteg {
        @Test
        public void givenMongoDbIsRunningWhenPlayThenNoException() throws UnknownHostException {
-           TicTacToe ticTacToe = new TicTacToe();
+           TictactoeMongo ticTacToe = new TictactoeMongo();
            assertEquals("No winner", ticTacToe.play(1, 1));
        }
 }
