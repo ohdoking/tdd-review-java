@@ -1,5 +1,6 @@
 package com.ohdoking.tddjava.ch06tictactoe.mongo;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.net.UnknownHostException;
@@ -15,23 +16,24 @@ import static org.junit.Assert.*;
  */
 public class TicTacToeCollectionSpec {
 
+    TicTacToeCollection collection
+    @Before
+    public void before() throws UnknownHostException {
+        collection = new TicTacToeCollection();
+    }
     /**
      * specify what the name of the DB
-     * @throws UnknownHostException
      */
     @Test
-    public void whenInstantiatedThenMongoHasDbNameTicTacToe() throws UnknownHostException {
-        TicTacToeCollection collection = new TicTacToeCollection();
+    public void whenInstantiatedThenMongoHasDbNameTicTacToe(){
         assertEquals( "tic-tac-toe", collection.getMongoCollection().getDBCollection().getDB().getName());
     }
 
     /**
      * create a specification that will define the name of the Mongo collection
-     * @throws UnknownHostException
      */
     @Test
-    public void whenInstantiatedThenMongoCollectionHasNameGame() throws UnknownHostException {
-        TicTacToeCollection collection = new TicTacToeCollection();
+    public void whenInstantiatedThenMongoCollectionHasNameGame(){
         assertEquals("game", collection.getMongoCollection().getName());
     }
 }
