@@ -1,11 +1,13 @@
 package com.ohdoking.tddjava.ch06tictactoe.mongo;
 
+import org.jongo.MongoCollection;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.net.UnknownHostException;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 /**
  * TicTacToeCollectionTest
@@ -16,10 +18,10 @@ import static org.junit.Assert.*;
  */
 public class TicTacToeCollectionSpec {
 
-    TicTacToeCollection collection
+    TicTacToeCollection collection;
     @Before
     public void before() throws UnknownHostException {
-        collection = new TicTacToeCollection();
+        collection = spy(new TicTacToeCollection());
     }
     /**
      * specify what the name of the DB
@@ -36,4 +38,28 @@ public class TicTacToeCollectionSpec {
     public void whenInstantiatedThenMongoCollectionHasNameGame(){
         assertEquals("game", collection.getMongoCollection().getName());
     }
+
+    /**
+     * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
+     */
+    @Test
+    public void
+    whenSaveMoveThenInvokeMongoCollectionSave() {
+        TicTacToeBean bean = new TicTacToeBean(3, 2, 1, 'Y');
+        MongoCollection mongoCollection = mock(MongoCollection.class);
+        //we're telling that mocked mongoCollection should be returned whenever we call the getMongoCollection method of the collection spied class
+        doReturn(mongoCollection).when(collection).getMongoCollection();
+        collection.saveMove(bean);
+        //we should verify that the correct invocation of the Jongo library is performed once
+        verify(mongoCollection, times(1)).save(bean);
+    }
+
+    @Test
+    public void whenSaveMoveThenReturnTrue() {
+        TicTacToeBean bean = new TicTacToeBean(3, 2, 1, 'Y');
+        MongoCollection mongoCollection = mock(MongoCollection.class);
+        doReturn(mongoCollection).when(collection).getMongoCollection();
+        assertTrue(collection.saveMove(bean));
+    }
+
 }
