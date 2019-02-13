@@ -72,6 +72,28 @@ By following these five principles, a developer is more likely to create a great
 • Interface Segregation Principle: A few specific interfaces are preferable than one general-purpose interface.
 • Dependency Inversion Principle: A class should depend on abstraction instead of implementation. This means that class dependencies must be focused on what is done and forget about how it is done.
 
+## MOCKING
+
+### TERM
+
+Test doubles is a generic name for all of the following types:
+• Dummy object's purpose is to act as a substitute for a real method argument
+• Test Stub can be used to replace a real object with a test-specific object that feeds the desired indirect inputs into the system under test
+• Test spy captures the indirect output calls made to another component by the system under test (SUT) for later verification by the test
+• Mock Object replaces an object the system under test (SUT) depends on, with a test-specific object that verifies that it is being used correctly by the SUT
+• Fake object replaces a component that the system under test (SUT) depends on with a much lighter-weight implementation
+
+### Mockito
+
+Mockito is a mocking framework with a clean and simple API.
+
+#### METHOD
+
+• mock(): This is used to create mocks. Optionally, we can specify how those mocks behave with when() and given().
+• spy(): This can be used for partial mocking. Spied objects invoke real methods unless we specify otherwise. As which mock(), behavior can be set for every public or protected method (excluding static). The major difference is that mock() creates a fake of the whole object, while spy() uses the real object.
+• verify(): This is used to check whether methods were called with given arguments. It is a form of assert.
+
+
 ## TIP
 
 ### Use descriptive names for test methods
@@ -107,6 +129,12 @@ In most cases, there is no need for new tests;
 small modifications to existing tests should be enough.
 The expected outcome of refactoring is to have all the tests passing both before and after the code is modified.
 
-
+### Using mocks
+Benefits include reduced code dependency and faster tests execution.
+Mocks are prerequisites for the fast execution of tests and the ability to concentrate on a single unit of functionality.
+By mocking dependencies external to the method that is being tested, the developer is able to focus on the task at hand without spending time setting them up.
+In a case of bigger or multiple teams working together, those dependencies might not even be developed.
+Also, execution of tests without mocks tends to be slow.
+Good candidates for mocks are databases, other products, services, and so on.
 
 
