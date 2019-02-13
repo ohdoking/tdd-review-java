@@ -19,9 +19,13 @@ import static org.mockito.Mockito.*;
 public class TicTacToeCollectionSpec {
 
     TicTacToeCollection collection;
+    TicTacToeBean bean;
+    MongoCollection mongoCollection;
     @Before
     public void before() throws UnknownHostException {
         collection = spy(new TicTacToeCollection());
+        bean = new TicTacToeBean(3, 2, 1, 'Y');
+        mongoCollection = mock(MongoCollection.class);
     }
     /**
      * specify what the name of the DB
@@ -45,8 +49,6 @@ public class TicTacToeCollectionSpec {
     @Test
     public void
     whenSaveMoveThenInvokeMongoCollectionSave() {
-        TicTacToeBean bean = new TicTacToeBean(3, 2, 1, 'Y');
-        MongoCollection mongoCollection = mock(MongoCollection.class);
         //we're telling that mocked mongoCollection should be returned whenever we call the getMongoCollection method of the collection spied class
         doReturn(mongoCollection).when(collection).getMongoCollection();
         collection.saveMove(bean);
@@ -56,8 +58,6 @@ public class TicTacToeCollectionSpec {
 
     @Test
     public void whenSaveMoveThenReturnTrue() {
-        TicTacToeBean bean = new TicTacToeBean(3, 2, 1, 'Y');
-        MongoCollection mongoCollection = mock(MongoCollection.class);
         doReturn(mongoCollection).when(collection).getMongoCollection();
         assertTrue(collection.saveMove(bean));
     }
