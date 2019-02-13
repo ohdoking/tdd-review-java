@@ -1,5 +1,6 @@
 package com.ohdoking.tddjava.ch06tictactoe.mongo;
 
+import com.mongodb.MongoException;
 import org.jongo.MongoCollection;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,7 +51,9 @@ public class TicTacToeCollectionSpec {
     public void
     whenSaveMoveThenInvokeMongoCollectionSave() {
         //we're telling that mocked mongoCollection should be returned whenever we call the getMongoCollection method of the collection spied class
-        doReturn(mongoCollection).when(collection).getMongoCollection();
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
         collection.saveMove(bean);
         //we should verify that the correct invocation of the Jongo library is performed once
         verify(mongoCollection, times(1)).save(bean);
@@ -58,8 +61,32 @@ public class TicTacToeCollectionSpec {
 
     @Test
     public void whenSaveMoveThenReturnTrue() {
-        doReturn(mongoCollection).when(collection).getMongoCollection();
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
         assertTrue(collection.saveMove(bean));
+    }
+
+    @Test
+    public void givenExceptionWhenSaveMoveThenReturnFalse() {
+        //It acts in a similar way to doReturn and throws an Exception when conditions set in when are fulfilled.
+        doThrow(new MongoException("Bla"))
+                .when(mongoCollection)
+                .save(any(TicTacToeBean.class));
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
+        assertFalse(collection.saveMove(bean));
+    }
+
+    @Test
+    public void whenDropThenInvokeMongoCollectionDrop() {
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
+        collection.drop();
+        verify(mongoCollection).drop();
+
     }
 
 }
