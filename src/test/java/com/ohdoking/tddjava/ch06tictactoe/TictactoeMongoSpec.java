@@ -1,5 +1,6 @@
 package com.ohdoking.tddjava.ch06tictactoe;
 
+import com.mongodb.MongoException;
 import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeBean;
 import com.ohdoking.tddjava.ch06tictactoe.mongo.TicTacToeCollection;
 import org.junit.Before;
@@ -27,6 +28,9 @@ public class TictactoeMongoSpec {
     @Before
     public final void before(){
         collection = mock(TicTacToeCollection.class);
+        doReturn(true)
+                .when(collection)
+                .saveMove(any(TicTacToeBean.class));
         ticTacToe = new TictactoeMongo(collection);
     }
 
@@ -139,6 +143,27 @@ public class TictactoeMongoSpec {
         //Finally, we need to verify that the saveMove method is really invoked:
         verify(collection, times(1)).saveMove(move);
 
+    }
+
+    @Test
+    public void whenPlayAndSaveReturnsFalseThenThrowException() {
+        doReturn(false)
+                .when(collection).
+                saveMove(any(TicTacToeBean.class));
+        TicTacToeBean move = new TicTacToeBean(1, 1, 3, 'X');
+        exception.expect(RuntimeException.class);
+        ticTacToe.play(move.getX(), move.getY());
+    }
+
+    @Test
+    public void
+    whenPlayInvokedMultipleTimesThenTurnIncreases() {
+        TicTacToeBean move1 = new TicTacToeBean(1, 1, 1, 'X');
+        ticTacToe.play(move1.getX(), move1.getY());
+        verify(collection, times(1)).saveMove(move1);
+        TicTacToeBean move2 = new TicTacToeBean(2, 1, 2, 'O');
+        ticTacToe.play(move2.getX(), move2.getY());
+        verify(collection, times(1)).saveMove(move2);
     }
 
 

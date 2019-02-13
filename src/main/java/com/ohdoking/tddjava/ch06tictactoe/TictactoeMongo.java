@@ -13,6 +13,8 @@ public class TictactoeMongo {
     public static final String NO_WINNER = "No winner";
     public static final String RESULT_DRAW = "The result is draw";
 
+    private int turn = 0;
+
     private TicTacToeCollection ticTacToeCollection;
 
     public TictactoeMongo() throws UnknownHostException {
@@ -27,7 +29,7 @@ public class TictactoeMongo {
         checkAxis(x);
         checkAxis(y);
         lastPlayer = nextPlayer();
-        setBox(new TicTacToeBean(1, x, y, lastPlayer));
+        setBox(new TicTacToeBean(++turn, x, y, lastPlayer));
         if (isWin(x, y)) {
             return lastPlayer + " is the winner";
         } else if (isDraw()) {
@@ -55,7 +57,9 @@ public class TictactoeMongo {
             throw new RuntimeException("Box is occupied");
         } else {
             board[bean.getX() - 1][bean.getY() - 1] = lastPlayer;
-            getTicTacToeCollection().saveMove(bean);
+            if (!getTicTacToeCollection().saveMove(bean)) {
+                throw new RuntimeException("Saving to DB failed");
+            }
         }
     }
 
