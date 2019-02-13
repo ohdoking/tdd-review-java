@@ -48,8 +48,7 @@ public class TicTacToeCollectionSpec {
      * Implement an option to save a single move with the turn number, the X and Y axis positions, and the player (X or O).
      */
     @Test
-    public void
-    whenSaveMoveThenInvokeMongoCollectionSave() {
+    public void whenSaveMoveThenInvokeMongoCollectionSave() {
         //we're telling that mocked mongoCollection should be returned whenever we call the getMongoCollection method of the collection spied class
         doReturn(mongoCollection)
                 .when(collection)
@@ -86,7 +85,25 @@ public class TicTacToeCollectionSpec {
                 .getMongoCollection();
         collection.drop();
         verify(mongoCollection).drop();
+    }
 
+    @Test
+    public void whenDropThenReturnTrue() {
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
+        assertTrue(collection.drop());
+    }
+
+    @Test
+    public void givenExceptionWhenDropThenReturnFalse(){
+        doThrow(new MongoException("Bla"))
+                .when(mongoCollection)
+                .drop();
+        doReturn(mongoCollection)
+                .when(collection)
+                .getMongoCollection();
+        assertFalse(collection.drop());
     }
 
 }
