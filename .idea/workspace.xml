@@ -2,40 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b74c058f-8cb1-4586-a27b-cb87a835870a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Game-a-Tron/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Game-a-Tron/src/main/java/com/ohdoking/bot/SampleApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestCSV/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestCSV/csv/employees.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestCSV/csv/projects.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestCSV/csv/tasks.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestCSV/src/com/ohdoking/test/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../refactoring-remind-project/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/java/CSVParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/java/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/java/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/java/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/resources/employees.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/resources/projects.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/main/resources/tasks.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testCC/src/test/java/CSVParserTestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,145 +65,91 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-              <folding>
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#879#880#0" expanded="true" />
-                <element signature="e#931#932#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#1082#1083#0" expanded="true" />
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1260#1261#0" expanded="true" />
-                <element signature="e#1631#1632#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#141#142#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Ship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="e#205#206#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+            <state relative-caret-position="399">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch05connect4/Connect4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="194" column="23" selection-start-line="194" selection-start-column="23" selection-end-line="194" selection-end-column="23" />
+            <state relative-caret-position="725">
+              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2457#2458#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2661#2662#0" expanded="true" />
+                <element signature="e#2690#2691#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="177">
+              <caret line="668" column="19" selection-start-line="668" selection-start-column="19" selection-end-line="668" selection-end-column="19" />
+              <folding>
+                <element signature="e#24832#24833#0" expanded="true" />
+                <element signature="e#24872#24873#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch05connect4/Connect4Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="197" column="135" selection-start-line="197" selection-start-column="7" selection-end-line="197" selection-end-column="135" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#4287#4288#0" expanded="true" />
+                <element signature="e#4349#4350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+              <folding>
+                <element signature="e#10225#10226#0" expanded="true" />
+                <element signature="e#10308#10309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/org/hamcrest/CoreMatchers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="500" column="55" selection-start-line="500" selection-start-column="55" selection-end-line="500" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch03tictactoe/TicTacToeSpec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="45" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,7 +158,32 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="1" />
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1126#1127#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -250,6 +198,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getWin</find>
+      <find>checkWinner</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -261,19 +215,23 @@
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch03tictactoe/TicTacToeSpec.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch03tictactoe/TicTacToe.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/DirectionSpec.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/LocationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/LocationSpec.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/PlanetSpec.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/PointSpec.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Point.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Ship.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch05connect4/Connect4.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch05connect4/Connect4Test.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongoTest.java" />
       </list>
     </option>
   </component>
@@ -288,6 +246,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,7 +287,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tddjava" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04ship" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06tictactoe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tdd-review-java" type="b2602c69:ProjectViewProjectNode" />
@@ -358,23 +317,51 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tddjava" type="462c0819:PsiDirectoryNode" />
+              <item name="ch03tictactoe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdd-review-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdd-review-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tddjava" type="462c0819:PsiDirectoryNode" />
               <item name="ch04ship" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdd-review-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdd-review-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tddjava" type="462c0819:PsiDirectoryNode" />
+              <item name="ch05connect4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdd-review-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdd-review-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tddjava" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06tictactoe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549890816937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549901454609" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="settings.editor.selected.configurable" value="debugger.dataViews" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ohdoking.tddjava.ch06tictactoe" />
+      <recent name="com.ohdoking.tddjava.ch05connect4" />
       <recent name="com.ohdoking.tddjava.ch04ship" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -399,81 +386,86 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShipSpec">
-    <configuration name="ShipSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.tdd-review-java [clean test jacocoTestReport]">
+    <configuration name="tdd-review-java [clean test jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Connect4Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohdoking.tddjava.ch04ship.*" />
+          <option name="PATTERN" value="com.ohdoking.tddjava.ch05connect4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch04ship" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch04ship.ShipSpec" />
+      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch05connect4" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch05connect4.Connect4Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipSpec.overpassEastBoundary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Connect4Test.whenDiskInsertedThenNumberOfDiscsIncreases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohdoking.tddjava.ch04ship.*" />
+          <option name="PATTERN" value="com.ohdoking.tddjava.ch05connect4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch04ship" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch04ship.ShipSpec" />
-      <option name="METHOD_NAME" value="overpassEastBoundary" />
+      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch05connect4" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch05connect4.Connect4Test" />
+      <option name="METHOD_NAME" value="whenDiskInsertedThenNumberOfDiscsIncreases" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipSpec.whenInstantiatedThenPlanetIsStored" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Connect4Test.whenFirstPlayerPlaysThenDiscColorIsRed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohdoking.tddjava.ch04ship.*" />
+          <option name="PATTERN" value="com.ohdoking.tddjava.ch05connect4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch04ship" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch04ship.ShipSpec" />
-      <option name="METHOD_NAME" value="whenInstantiatedThenPlanetIsStored" />
+      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch05connect4" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch05connect4.Connect4Test" />
+      <option name="METHOD_NAME" value="whenFirstPlayerPlaysThenDiscColorIsRed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Connect4Test.whenNoMoreRoomInColumnThenRuntimeException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohdoking.tddjava.ch04ship.*" />
+          <option name="PATTERN" value="com.ohdoking.tddjava.ch05connect4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch04ship" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch04ship.ShipSpec" />
-      <option name="METHOD_NAME" value="whenReceiveCommandsThenOForOkAndXForObstacle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShipSpec.whenReceiveCommandsThenStopOnObstacle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd-review-java.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ohdoking.tddjava.ch04ship.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch04ship" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch04ship.ShipSpec" />
-      <option name="METHOD_NAME" value="whenReceiveCommandsThenStopOnObstacle" />
+      <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch05connect4" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch05connect4.Connect4Test" />
+      <option name="METHOD_NAME" value="whenNoMoreRoomInColumnThenRuntimeException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -481,11 +473,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShipSpec" />
-        <item itemvalue="JUnit.ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
-        <item itemvalue="JUnit.ShipSpec.whenReceiveCommandsThenStopOnObstacle" />
-        <item itemvalue="JUnit.ShipSpec.overpassEastBoundary" />
-        <item itemvalue="JUnit.ShipSpec.whenInstantiatedThenPlanetIsStored" />
+        <item itemvalue="Gradle.tdd-review-java [clean test jacocoTestReport]" />
+        <item itemvalue="JUnit.Connect4Test" />
+        <item itemvalue="JUnit.Connect4Test.whenFirstPlayerPlaysThenDiscColorIsRed" />
+        <item itemvalue="JUnit.Connect4Test.whenNoMoreRoomInColumnThenRuntimeException" />
+        <item itemvalue="JUnit.Connect4Test.whenDiskInsertedThenNumberOfDiscsIncreases" />
       </list>
     </recent_temporary>
   </component>
@@ -503,69 +495,69 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShipSpec - 2019.02.11 at 13h 38m 10s.xml">
-      <configuration name="ShipSpec" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 32m 01s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_overpassEastBoundary - 2019.02.11 at 13h 41m 39s.xml">
-      <configuration name="ShipSpec.overpassEastBoundary" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 32m 12s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_overpassEastBoundary - 2019.02.11 at 13h 49m 00s.xml">
-      <configuration name="ShipSpec.overpassEastBoundary" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 48m 37s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_whenReceiveCommandsThenStopOnObstacle - 2019.02.11 at 14h 06m 09s.xml">
-      <configuration name="ShipSpec.whenReceiveCommandsThenStopOnObstacle" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 49m 58s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_whenReceiveCommandsThenStopOnObstacle - 2019.02.11 at 14h 06m 19s.xml">
-      <configuration name="ShipSpec.whenReceiveCommandsThenStopOnObstacle" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 50m 10s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec - 2019.02.11 at 14h 07m 53s.xml">
-      <configuration name="ShipSpec" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 16h 52m 57s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec - 2019.02.11 at 14h 08m 28s.xml">
-      <configuration name="ShipSpec" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 17h 08m 51s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec - 2019.02.11 at 14h 08m 39s.xml">
-      <configuration name="ShipSpec" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 17h 11m 08s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_whenReceiveCommandsThenStopOnObstacle - 2019.02.11 at 14h 09m 39s.xml">
-      <configuration name="ShipSpec.whenReceiveCommandsThenStopOnObstacle" configurationId="JUnit" />
+    <history-entry file="Connect4Test - 2019.02.12 at 17h 13m 16s.xml">
+      <configuration name="Connect4Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipSpec_whenReceiveCommandsThenOForOkAndXForObstacle - 2019.02.11 at 14h 10m 10s.xml">
-      <configuration name="ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" configurationId="JUnit" />
+    <history-entry file="tdd-review-java_[clean_test_jacocoTestReport] - 2019.02.12 at 17h 15m 51s.xml">
+      <configuration name="tdd-review-java [clean test jacocoTestReport]" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Gradle" visible="true" weight="0.13018598" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.13018598" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -585,20 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
           <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch03tictactoe/TicTacToeSpec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2224#2225#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,68 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/PointSpec.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="221" column="28" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-          <folding>
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#141#142#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,67 +632,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="194" column="23" selection-start-line="194" selection-start-column="23" selection-end-line="194" selection-end-column="23" />
+        <state relative-caret-position="345">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="465">
           <caret line="52" column="60" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Planet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch04ship/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="240">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
             <element signature="e#344#345#0" expanded="true" />
             <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch04ship/ShipSpec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="177" column="124" selection-start-line="176" selection-start-column="7" selection-end-line="177" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch03tictactoe/TicTacToeSpec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="45" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/org/hamcrest/CoreMatchers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="500" column="55" selection-start-line="500" selection-start-column="55" selection-end-line="500" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="e#10225#10226#0" expanded="true" />
+            <element signature="e#10308#10309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="668" column="19" selection-start-line="668" selection-start-column="19" selection-end-line="668" selection-end-column="19" />
+          <folding>
+            <element signature="e#24832#24833#0" expanded="true" />
+            <element signature="e#24872#24873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch05connect4/Connect4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch05connect4/Connect4Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="197" column="135" selection-start-line="197" selection-start-column="7" selection-end-line="197" selection-end-column="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+            <element signature="e#4349#4350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06tictactoe/TictactoeMongoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1126#1127#0" expanded="true" />
           </folding>
         </state>
       </provider>
