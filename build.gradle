@@ -22,3 +22,11 @@ apply plugin: 'jacoco'
 jacoco {
     toolVersion = "0.8.2"
 }
+
+test {
+    include '**/*Spec.class'
+}
+
+task testInteg(type: Test) {
+    include '**/*Integ.class'
+}
