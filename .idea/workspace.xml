@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b74c058f-8cb1-4586-a27b-cb87a835870a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06review/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06review/CustomDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/MockingSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java" afterDir="false" />
     </list>
@@ -124,10 +123,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/MockingSpec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,19 +174,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
               <caret line="571" column="6" selection-start-line="571" selection-start-column="6" selection-end-line="571" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.10.19/8269667b73d9616600359a9b0ba1b1c7d0cf7a97/mockito-all-1.10.19-sources.jar!/org/mockito/Mockito.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-218">
-              <caret line="1552" column="24" selection-start-line="1552" selection-start-column="24" selection-end-line="1552" selection-end-column="24" />
-              <folding>
-                <element signature="e#69145#69146#0" expanded="true" />
-                <element signature="e#69203#69204#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -251,6 +248,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06review/CustomDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohdoking/tddjava/ch06review/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/MockingSpec.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java" />
       </list>
     </option>
@@ -397,7 +395,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest">
+  <component name="RunManager" selected="JUnit.MockingSpec">
     <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
@@ -413,7 +411,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.givenTwoIntegerWhenAddThenReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.stubbingVoidMethodsWithExceptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
@@ -423,13 +421,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch06review" />
       <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.CalculatorTest" />
-      <option name="METHOD_NAME" value="givenTwoIntegerWhenAddThenReturnFalse" />
+      <option name="METHOD_NAME" value="stubbingVoidMethodsWithExceptions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.givenTwoIntegerWhenAddThenReturnInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.verificationInOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
@@ -439,13 +437,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch06review" />
       <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.CalculatorTest" />
-      <option name="METHOD_NAME" value="givenTwoIntegerWhenAddThenReturnInteger" />
+      <option name="METHOD_NAME" value="verificationInOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MockingSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
@@ -454,14 +452,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch06review" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.CalculatorTest" />
-      <option name="METHOD_NAME" value="givenTwoWhenSaveTrueThenGetInteger" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.MockingSpec" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.useArguementMatcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MockingSpec.findingRedundantInvocations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-review-java.test" />
       <extension name="coverage">
         <pattern>
@@ -470,8 +467,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ohdoking.tddjava.ch06review" />
-      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.CalculatorTest" />
-      <option name="METHOD_NAME" value="useArguementMatcher" />
+      <option name="MAIN_CLASS_NAME" value="com.ohdoking.tddjava.ch06review.MockingSpec" />
+      <option name="METHOD_NAME" value="findingRedundantInvocations" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -479,11 +476,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MockingSpec" />
+        <item itemvalue="JUnit.MockingSpec.findingRedundantInvocations" />
         <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" />
-        <item itemvalue="JUnit.CalculatorTest.givenTwoIntegerWhenAddThenReturnFalse" />
-        <item itemvalue="JUnit.CalculatorTest.givenTwoIntegerWhenAddThenReturnInteger" />
-        <item itemvalue="JUnit.CalculatorTest.useArguementMatcher" />
+        <item itemvalue="JUnit.CalculatorTest.verificationInOrder" />
+        <item itemvalue="JUnit.CalculatorTest.stubbingVoidMethodsWithExceptions" />
       </list>
     </recent_temporary>
   </component>
@@ -501,35 +498,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 17m 59s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_stubbingVoidMethodsWithExceptions - 2019.02.14 at 17h 29m 41s.xml">
+      <configuration name="CalculatorTest.stubbingVoidMethodsWithExceptions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 18m 03s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_verificationInOrder - 2019.02.14 at 17h 30m 43s.xml">
+      <configuration name="CalculatorTest.verificationInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 18m 34s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_verificationInOrder - 2019.02.14 at 17h 31m 01s.xml">
+      <configuration name="CalculatorTest.verificationInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 20m 22s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_verificationInOrder - 2019.02.14 at 17h 31m 11s.xml">
+      <configuration name="CalculatorTest.verificationInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 21m 26s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_verificationInOrder - 2019.02.14 at 17h 31m 14s.xml">
+      <configuration name="CalculatorTest.verificationInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 21m 30s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 22m 11s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 23m 10s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_givenTwoWhenSaveTrueThenGetInteger - 2019.02.14 at 17h 23m 18s.xml">
-      <configuration name="CalculatorTest.givenTwoWhenSaveTrueThenGetInteger" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest - 2019.02.14 at 17h 23m 37s.xml">
+    <history-entry file="CalculatorTest - 2019.02.14 at 17h 32m 10s.xml">
       <configuration name="CalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2019.02.14 at 17h 33m 20s.xml">
+      <configuration name="CalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockingSpec - 2019.02.14 at 17h 33m 34s.xml">
+      <configuration name="MockingSpec" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockingSpec_findingRedundantInvocations - 2019.02.14 at 17h 33m 54s.xml">
+      <configuration name="MockingSpec.findingRedundantInvocations" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockingSpec - 2019.02.14 at 17h 34m 12s.xml">
+      <configuration name="MockingSpec" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -980,13 +977,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/MockingSpec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="420">
+          <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohdoking/tddjava/ch06review/CalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
