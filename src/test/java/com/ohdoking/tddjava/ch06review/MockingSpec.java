@@ -4,7 +4,10 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
 import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.List;
 
@@ -14,8 +17,10 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class MockingSpec {
 
+    @Mock
     List list;
 
     @Rule
@@ -24,7 +29,7 @@ public class MockingSpec {
 
     @Before
     public void before(){
-        list = mock(List.class);
+
     }
 
     @Test
