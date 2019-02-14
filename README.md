@@ -112,29 +112,66 @@ the main difference when compared to writing tests after the implementation is d
 
 ### Rerun all the tests every time the implementation code changes.
 
-This ensures that there is no unexpected side-effect caused by code changes.
-Every time any part of the implementation code changes, all tests should be run. Ideally, tests are fast to execute and can be run by a developer locally. Once code is submitted to the version control, all tests should be run again to ensure that there was no problem due to code merges. This is especially important when more than one developer is working on the code. Continuous Integration tools such as Jenkins, Hudson, Travind, Bamboo and Go-CD should be used to pull the code from the repository, compile it, and run tests.
+    This ensures that there is no unexpected side-effect caused by code changes.
+    Every time any part of the implementation code changes, all tests should be run. Ideally, tests are fast to execute and can be run by a developer locally. Once code is submitted to the version control, all tests should be run again to ensure that there was no problem due to code merges. This is especially important when more than one developer is working on the code. Continuous Integration tools such as Jenkins, Hudson, Travind, Bamboo and Go-CD should be used to pull the code from the repository, compile it, and run tests.
 
 ### Write the simplest code to pass the test. This ensures a cleaner and clearer design and avoids unnecessary features
 
-The idea is that the simpler the implementation, the better and easier it is to maintain the product.
-The idea adheres to the KISS principle. It states that most systems work best if they are kept simple rather than made complex; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided.
+    The idea is that the simpler the implementation, the better and easier it is to maintain the product.
+    The idea adheres to the KISS principle. It states that most systems work best if they are kept simple rather than made complex; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided.
 
 ### Refactor only after all the tests have passed.
 
-Benefits: refactoring is safe
+    Benefits: refactoring is safe
 
-If all the implementation code that can be affected has tests and if they are all passing, it is relatively safe to refactor.
-In most cases, there is no need for new tests;
-small modifications to existing tests should be enough.
-The expected outcome of refactoring is to have all the tests passing both before and after the code is modified.
+    If all the implementation code that can be affected has tests and if they are all passing, it is relatively safe to refactor.
+    In most cases, there is no need for new tests;
+    small modifications to existing tests should be enough.
+    The expected outcome of refactoring is to have all the tests passing both before and after the code is modified.
 
 ### Using mocks
-Benefits include reduced code dependency and faster tests execution.
-Mocks are prerequisites for the fast execution of tests and the ability to concentrate on a single unit of functionality.
-By mocking dependencies external to the method that is being tested, the developer is able to focus on the task at hand without spending time setting them up.
-In a case of bigger or multiple teams working together, those dependencies might not even be developed.
-Also, execution of tests without mocks tends to be slow.
-Good candidates for mocks are databases, other products, services, and so on.
 
+    Benefits include reduced code dependency and faster tests execution.
 
+    Mocks are prerequisites for the fast execution of tests and the ability to concentrate on a single unit of functionality.
+    By mocking dependencies external to the method that is being tested, the developer is able to focus on the task at hand without spending time setting them up.
+    In a case of bigger or multiple teams working together, those dependencies might not even be developed.
+    Also, execution of tests without mocks tends to be slow.
+    Good candidates for mocks are databases, other products, services, and so on.
+
+### Use setup and teardown methods
+
+    Benefits: these allow preparation or setup and disposal or teardown code to be executed before and after the class or each test method.
+
+    In many cases, some code needs to be executed before the test class or each method in a class.
+    For this purpose, JUnit has the @BeforeClass and @Before annotations that should be used in the setup phase.
+    The @ BeforeClass executes the associated method before the class is loaded (before the first test method is run).
+    @Before executes the associated method before each test is run. Both should be used when there are certain preconditions required by tests.
+    The most common example is setting up test data in the (hopefully in-memory) database.
+    On the opposite end, are the @After and @AfterClass annotations that should be used as the teardown phase.
+    Their main purpose is to destroy the data or state created during the setup phase or by tests themselves.
+    Each test should be independent from others. Moreover, no test should be affected by the others.
+    The teardown phase helps maintaining the system as if no test was previously executed.
+
+### Tests should run fast
+
+    Benefits: tests are used often
+
+    If it takes a lot of time to run tests, developers will stop using them or run only a small subset related to the changes they are making.
+    One benefit of fast tests, besides fostering their usage, is fast feedback.
+    The sooner the problem is detected, the easier it is to fix it.
+    Knowledge about the code that produced the problem is still fresh.
+    If a developer has already started working on the next feature while waiting for the completion of the execution of tests, he might decide to postpone fixing the problem until that new feature is developed.
+    On the other hand, if he drops his current work to fix the bug, time is lost in context switching.
+
+### All tests should pass before a new test is written
+
+    Benefits: focus is maintained on a small unit of work, and implementation code is (almost) always in a working condition.
+
+    It is sometimes tempting to write multiple tests before the actual implementation.
+    In other cases, developers ignore problems detected by the existing tests and move towards new features.
+    This should be avoided whenever possible.
+    In most cases, breaking this rule will only introduce technical debt that will need to be paid with interest.
+    One of the goals of TDD is ensuring that the implementation code is (almost) always working as expected.
+    Some projects, due to pressures to reach the delivery date or maintain the budget, break this rule and dedicate time to new features, leaving the fixing of the code associated with failed tests for later.
+    Those projects usually end up postponing the inevitable.
