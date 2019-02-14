@@ -72,10 +72,21 @@ public class CalculatorTest {
         verify(list).add(eq("string"));
     }
 
-   
+    @Test
+    public void givenTwoWhenAddThenVerifyValue(){
+        calculator.add(3,1);
+        verify(db).save(4);
+    }
 
+    @Test
+    public void givenTwoIntegerWhenAddThenReturnFalseThenException(){
+        doReturn(false)
+                .when(db)
+                .save(3);
 
-
+        exception.expect(RuntimeException.class);
+        calculator.add(1,2);
+    }
 
 
 }
