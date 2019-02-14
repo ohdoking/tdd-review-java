@@ -23,6 +23,10 @@ public class TictactoeMongo {
 
     public TictactoeMongo(TicTacToeCollection ticTacToeCollection) {
         this.ticTacToeCollection = ticTacToeCollection;
+        if (!ticTacToeCollection.drop()) {
+            throw new RuntimeException("Dropping DB collection failed");
+        }
+
     }
 
     public String play(int x, int y) {

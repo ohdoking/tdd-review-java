@@ -30,6 +30,9 @@ public class TictactoeMongoSpec {
         collection = mock(TicTacToeCollection.class);
         doReturn(true)
                 .when(collection)
+                .drop();
+        doReturn(true)
+                .when(collection)
                 .saveMove(any(TicTacToeBean.class));
         ticTacToe = new TictactoeMongo(collection);
     }
@@ -156,8 +159,7 @@ public class TictactoeMongoSpec {
     }
 
     @Test
-    public void
-    whenPlayInvokedMultipleTimesThenTurnIncreases() {
+    public void whenPlayInvokedMultipleTimesThenTurnIncreases() {
         TicTacToeBean move1 = new TicTacToeBean(1, 1, 1, 'X');
         ticTacToe.play(move1.getX(), move1.getY());
         verify(collection, times(1)).saveMove(move1);
@@ -166,5 +168,20 @@ public class TictactoeMongoSpec {
         verify(collection, times(1)).saveMove(move2);
     }
 
+    /**
+     * We should invoke the drop() method whenever our TicTacToe class is instantiated. We
+     * should also make sure that RuntimeException is thrown when drop() returns false.
+     */
+    @Test
+    public void whenInstantiatedThenCollectionDrop() {
+        verify(collection, times(1)).drop();
+    }
+
+    @Test
+    public void whenInstantiatedAndDropReturnsFalseThenThrowException() {
+        doReturn(false).when(collection).drop();
+        exception.expect(RuntimeException.class);
+        new TictactoeMongo(collection);
+    }
 
 }
