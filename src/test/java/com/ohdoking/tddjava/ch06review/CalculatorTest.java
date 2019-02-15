@@ -4,12 +4,17 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.mockito.Mockito.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class CalculatorTest {
 
     Calculator calculator;
+    @Mock
     CustomDB db;
 
     @Rule
@@ -17,7 +22,6 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        db = mock(CustomDB.class);
         calculator = new Calculator(db);
     }
 
@@ -35,5 +39,40 @@ public class CalculatorTest {
 
         exception.expect(RuntimeException.class);
         calculator.add(1,2);
+    }
+
+    @Test
+    public void given4IntegerWhenAddThenReturnSum(){
+        //CustomDB spy = spy(db);
+
+        when(db.save(anyInt())).thenReturn(true);
+
+        calculator.add(1)
+                .add(4)
+                .add(5)
+                .add(1);
+
+        verify(db).save(1);
+
+    }
+
+    @Test
+    public void givenTwoIntegerWhenSubtractThenReturn0(){
+
+        doReturn(true)
+                .when(db)
+                .save(anyInt());
+
+        calculator.subtract(5,2);
+    }
+
+    @Test
+    public void whenSaveThenReturnFalse(){
+
+        doReturn(false)
+                .when(db)
+                .save(anyInt());
+        exception.expect(RuntimeException.class);
+        calculator.subtract(5,2);
     }
 }

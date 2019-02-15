@@ -12,15 +12,29 @@ public class Calculator {
     public Calculator(){
         this(new CustomDB());
     }
-    public int add(int i, int j) {
+    public Calculator add(int i, int j) {
         int result = i + j;
         if(!db.save(result)){
             throw new RuntimeException();
         }
-        return result;
+        return this;
+    }
+
+    public Calculator add(int i){
+        int result = getSaveData() + i;
+        db.save(result);
+        return this;
     }
 
     public int getSaveData(){
         return db.getResult();
+    }
+
+    public Calculator subtract(int i, int j) {
+        int result = i - j;
+        if(!db.save(result)){
+            throw new RuntimeException();
+        }
+        return this;
     }
 }
