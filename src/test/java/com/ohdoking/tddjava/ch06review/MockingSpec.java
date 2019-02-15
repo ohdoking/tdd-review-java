@@ -1,16 +1,20 @@
 package com.ohdoking.tddjava.ch06review;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.ArgumentMatcher;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,6 +24,13 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
+/**
+ *
+ * MockingSpec
+ *
+ * reference : https://bestalign.github.io/2016/07/10/intro-mockito-2/
+ * 
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class MockingSpec {
 
@@ -195,4 +206,81 @@ public class MockingSpec {
         // use doReturn() instead
         doReturn("foo").when(spy).get(0);
     }
+
+    @Test
+    public void argumentMatcher(){
+        class ListOfTwoElements extends ArgumentMatcher<List> {
+            @Override
+            public boolean matches(Object argument) {
+                List list = (List)argument;
+                return list.size() == 3;
+            }
+        }
+
+        List mock = mock(List.class);
+        when(mock.addAll(argThat(new ListOfTwoElements()))).thenReturn(true);
+
+        //mock.addAll(Arrays.asList("one", "two")); // false
+        mock.addAll(Arrays.asList("one", "two","three")); // true
+
+        verify(mock).addAll(argThat(new ListOfTwoElements()));
+    }
+
+    /**
+     * to capture arguments
+     */
+    @Test
+    public void capturingArgumentsForFurtherAssertions(){
+        list.addAll(Arrays.asList("one", "two", "three"));
+
+        ArgumentCaptor<List> argument = ArgumentCaptor.forClass(List.class);
+        verify(list).addAll(argument.capture());
+        Assert.assertTrue(argument.getValue().size() == 3);
+    }
+
+    /**
+     * reset mock
+     */
+    @Test
+    public void resettingMocks(){
+        List mock = mock(List.class);
+        when(mock.size()).thenReturn(10);
+        mock.add(1);
+
+        reset(mock);
+    }
+
+    /**
+     * verify time
+     */
+    @Test
+    public void verificationWithTimeout(){
+        verify(list, timeout(100)).size();
+        verify(list, timeout(100).times(2)).size();
+        verify(list, timeout(100).atLeast(2)).size();
+    }
+
+    /**
+     * using chaining
+     */
+    @Test
+    public void oneLinerStubs(){
+        List mock = when(mock(List.class).get(0))
+                .thenReturn(1)
+                .thenReturn(2)
+                .thenThrow(Exception.class)
+                .getMock();
+
+    }
+
+    /**
+     * check spy or mock
+     */
+    @Test
+    public void mockingDetailsTest(){
+        mockingDetails(list).isMock();
+        mockingDetails(list).isSpy();
+
+    }
+
 }
