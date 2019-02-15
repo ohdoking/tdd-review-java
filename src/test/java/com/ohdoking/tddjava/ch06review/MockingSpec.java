@@ -7,8 +7,11 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
+import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.stubbing.Answer;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.mockito.Matchers.anyFloat;
@@ -144,5 +147,52 @@ public class MockingSpec {
         //verify(list).add("two");// if remove fail
 
         verifyNoMoreInteractions(list); // fail here
+    }
+
+    @Test
+    public void stubbingWithCallbacks(){
+        when(list.get(anyInt())).thenAnswer(new Answer<Integer>() {
+            public Integer answer(InvocationOnMock invocation) {
+                Object[] args = invocation.getArguments(); // arguments
+                List mock = (List)invocation.getMock(); // mock itself
+                int result = (Integer)args[0] + 1;
+                return result;
+            }
+        });
+
+        System.out.println(list.get(1)); // called with argument: 2
+
+        when(list.get(anyInt())).thenAnswer(new Answer<Integer>() {
+            @Override
+            public Integer answer(InvocationOnMock invocation) throws Throwable {
+                Object[] args = invocation.getArguments();
+                return (Integer)args[0] + 10;
+            }
+        });
+
+        System.out.println(list.get(100));
+    }
+
+    @Test
+    public void spyingOnRealObjects(){
+        List list2 = new LinkedList();
+        List spy = spy(list2);
+
+        when(spy.size()).thenReturn(100); // stubbing
+
+        spy.add("one");
+        spy.add("two");
+
+        System.out.println(spy.get(0)); // one
+        System.out.println(spy.size()); // 100
+
+        verify(spy).add("one");
+        verify(spy).add("two");
+
+        // Wrong use case
+        //when(spy.get(10)).thenReturn("foo"); // IndexOutOfBoundsException
+
+        // use doReturn() instead
+        doReturn("foo").when(spy).get(0);
     }
 }
